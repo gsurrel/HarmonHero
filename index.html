@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HarmonHero</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/bare.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <!-- add the fx attribute to the nav if you want it fixed to the top -->
+    <nav>
+        <!-- this label allows the checkbox to be activated by clicking anywhere in the nav -->
+        <label>
+            <!-- checkbox required for responsiven menu -->
+            <input type="checkbox">
+            
+            <!-- bareCSS will use the header to contain the hamburger menu -->
+            <header>
+                <!-- you can leave this empty if you don't want a title -->
+                <a><img src="img/harmonhero.svg"> HarmonHero</a>
+            </header>
+            
+            <!-- the main navigation items are anchor links within an unordered list -->
+            <!--<ul>                                                                     -->
+            <!--    <li><a href="index.html">Home</a></li>                               -->
+            <!--    <li><a href="about.html">About</a></li>                              -->
+            <!--    <li>                                                                 -->
+            <!--        <a>Dropdown</a>                                                  -->
+            <!--                                                                         -->
+                        <!-- use <menu> and <menuitem> within an <li> for dropdowns -->
+            <!--        <menu>                                                           -->
+            <!--            <menuitem><a href="#">Item one</a></menuitem>                -->
+            <!--            <menuitem><a href="#">Item two</a></menuitem>                -->
+            <!--        </menu>                                                          -->
+            <!--    </li>                                                                -->
+            <!--</ul>                                                                    -->
+        </label>
+    </nav>
+
+    <section>
+        <h1>Hi!</h1>
+        <div id="app">
+            {{ message }}
+        </div>
+    </section>
+    
+    <section>
+        <canvas id="canvasStream" width="600" height="300"></canvas>
+        <canvas id="canvasBars" width="600" height="300"></canvas>
+    </section>
+    
+    <footer>
+        <grid>
+            <div col="1/2">
+                <p>Created by <a href="https://gregoire.surrel.org" target="_blank">Grégoire Surrel</a></p>
+            </div>
+            
+            <div col="1/2" txt="r">
+                <a href="https://github.com/gsurrel/HarmonHero" target="_blank">
+                    Source
+                </a>
+            </div>
+        </grid>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/d3.js" defer></script>
+    <script src="js/vue.js" defer></script>
+    <script src="js/hh.js" defer></script>
+</body>
+</html>
